@@ -12,3 +12,5 @@
 # git fetch -b <branch-name> -> fetches a branch from remote
 # git remote -> shows the remote
 # git remote add -> adds remote to local git
+# git clone <remote-url> -> clones repo
+# git clone -b <branch-name> <remote-url> <folder-name> -> clones specific branch of remote to specific folder
