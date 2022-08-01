@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from "react";
+
+import MyComponent from "./MyComponent";
 
 const App = () => {
+  const [show, setShow] = useState(false);
+  console.log(show);
   return (
-    <h1>Hello World!</h1>
-  )
-}
+    <>
+      {show && <MyComponent />}
+      <button onClick={() => setShow((p) => !p)}>
+        {show ? "Hide" : "Show"}
+      </button>
+    </>
+  );
+};
 
-export default App
+export default App;
