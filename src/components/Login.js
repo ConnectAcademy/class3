@@ -1,13 +1,17 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../store/AuthContext";
 
 const Login = () => {
   const { handleLogin } = useContext(AuthContext);
+  const nav = useNavigate();
+
   const onHandleLogin = (ev) => {
     ev.preventDefault();
     const { username } = ev.target;
     handleLogin(username.value);
+    nav("/profile");
   };
   return (
     <form
